@@ -1,0 +1,68 @@
+-----------------HTML5-----------------
+
+Titre/sous-titre: <h1à6>
+Paragraphe: <p>
+to wraps element: <div> et <section>
+Liens de navigations: <nav>
+Pour les sidebars, ad, liens: <aside>
+<aside>
+  <h3>Related Links</h3>
+  <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</aside>
+
+&
+
+Vers des documents: <link rel="stylesheet" type="text/css" href="styles.css">
+Pour une icone: <link>
+Hyperliens: <a href="" > </a>
+
+
+Unordered list: <ul> / Ordered list: <ol type="A">
+Ligne: <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+Bas de page: <footer>
+
+Manipulation de texte: Span tag
+<p>This is a    <span style="color: red; font-weight: bold;">highlighted</span>    text.</p>
+
+Des petits trucs à mettre dans les tags: 
+Les attributs
+Schéma: <tagname attribute="value"> Content </tagname>
+placeholder: description de l'action pour l'utilisateur
+id: identifiant
+src: source
+alt: text pour une image
+href: hyperlinks
+style: Apply CSS style
+name: pour un form
+
+Les classes d'attributs: pour grouper des attributs
+Schéma: <tagname class="classname "> Content </tagname>
+
+
+INTERACTIONS:
+Formulaire: <form>
+Input: <input type="" name="" placeholder="">
+Boutons: <button type="">
+	TYPES:	
+	-submit
+
+Multimedia:
+<img>
+Pour rendre une région cliquable: <area>
+Audio:
+Vidéo:
+<video controls width="640" height="360">
+  <source src="video.mp4" type="video/mp4">
+  Your browser may not support the video element.
+</video>
+Intégration de contenus de diff source: <iframe>
+
+------------------CSS---------------------
+
+
+
