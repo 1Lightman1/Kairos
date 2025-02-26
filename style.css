@@ -3,8 +3,14 @@
 	padding: 0;
 }
 
-body{
+body {
+	font-family: Arial, sans-serif;
 	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
 
 p {
@@ -73,4 +79,100 @@ p {
 
 .circle:nth-child(5) {
 	transform: translate3d(0,0,150px);
+}
+
+
+/* Slider pour les pages */
+
+input[type="radio"] {
+	display: none; /* Cache les boutons radio */
+}
+
+.slider-container {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	transition: transform 0.5s ease-in-out;
+}
+
+/* Masquer les boutons radio */
+input[type="radio"] {
+	display: none;
+}
+
+/* Positionner les articles */
+.slider-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+}
+
+/* Effet de mise au centre et transparence */
+.slider label {
+	cursor: pointer;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+/* État initial : article 3 centré */
+
+/* Zoom et transparence selon la position */
+#bouton1:checked ~ .slider{
+	color: red;
+}
+
+#bouton2:checked ~ .slider {
+	color: blue;
+}
+
+/* Navigation */
+.buttons {
+	margin-top: 50px;
+}
+
+.buttons label {
+	padding: 10px 15px;
+	margin: 5px;
+	border: none;
+	background-color:white;
+	color:black ;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background 0.2s;
+}
+
+.buttons label:hover {
+	background-color: black;
+	color: white;
+}
+
+.buttons label:active {
+	background-color: red;
+	color: black;
+}
+
+.article {
+	width: 150px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	transition: transform 0.5s, opacity 0.5s;
 }
