@@ -5,12 +5,12 @@
 
 body {
 	font-family: Arial, sans-serif;
-	background-color: white;
+	background-color: black;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	height: 90vh;
 }
 
 p {
@@ -83,33 +83,63 @@ p {
 
 
 
-
-/* Slider pour les pages */
-/* Conteneur principal */
-.slide-container {
+/* Conteneur principal du slider */
+.slider-container {
+	width: 2000px;
+	height: 300px;
 	display: flex;
-	flex-direction: row;
-	transition: 0.5s;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: auto;
 }
 
-/* Chaque slide */
-.slide {
+/* Le slider contenant tous les articles */
+.slider {
 	display: flex;
-	background: black;
-	color: white;
+	transition: transform 1s ease;
 }
 
-/* Positionner les boutons de navigation */
+/* Styles des articles */
+/*METTRE des photos pour illustrer les articles*/
+.article {
+	width: 200px;
+	height: 300px;
+	background-color: white;
+	margin: 20px; /*Espacement entre les articles*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	transition: scale 1s ease ,opacity 1s ease;
+	
+}
+
+/* Boutons de navigation */
 .buttons {
 	display: flex;
+	justify-content: center;
 }
 
 button {
+	background-color: black;
+	color: white;
+	transition: background-color 0.5s;
+	border: none;
+	padding: 10px 15px;
+
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+button:hover {
 	background-color: white;
 	color: black;
 }
 
-button:hover {
-	background-color: black;
-	color: white;
+button:active{
+	background-color: red;
+	color: black;
+	transition: background-color 0.1s;
 }

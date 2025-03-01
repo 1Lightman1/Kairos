@@ -63,6 +63,57 @@ Vidéo:
 Intégration de contenus de diff source: <iframe>
 
 ------------------CSS---------------------
+Dans le fichier.html <style></style>
+Dans un autre fichier.css + linker dans le fichier html: <link href="style.css" rel="stylesheet">
 
+h1 (sélecteur){
+color(propriété): black (valeur);
+}
 
+-Par exemple un paragraphe dans un body HERITERA des descriptions du body
+-Prends en compte la dernière règle
+-Prends en compte la règle la plus spécifique
 
+HTML   : DESCRIPTION                        : CSS
+class  : pour spécifier certains éléments   : .le_nom_de_la_classe
+id     : un seul élément                    : #le_nom_de_la_classe
+système descendant:                         : type1 type2 { }
+enfants directes:                           : type1 > type2 { }
+voisin directe:                             : type1 + type2 { }
+voisins suivants:                           : type1 ~ type2 { }
+
+Pseudo-classe: 
+:hover				  =>   lors du survol
+:active				  =>   
+:focus				  =>   focalise lors de la recharge
+:nth-child-type(nb_de_l'enfant)   =>   pour cibler le n-ième enfant de même type dans une partie : exemple :nth-child-type(2n) = choisit les pairs
+
+Les boîtes:
+Hauteur/Largeur
+Padding  :   Marge intérieur
+Border   :   Bordure
+Margin  :   Marge extérieure
+Display  : Comportement vis-à-vis des autres éléments
+	Block : En block aligner, largeur modifiable
+	Inline: prends la largeur de leur contenu
+	
+Position:
+	Absolute: bloqué à un endroit de la page
+	Fixed: Fixé sur la fenêtre d'observation
+	Sticky: Est static jusqu'à ce que l'on scrolle où il arrive en haut de page et devient fixed jusqu'à ce qu'il sorte de son parent
+
+Transition / Transform:
+	Transform ou autres dans le type:hover
+	Transition dans la description de type pour faire référence à dans la description ou le transform ailleurs
+transtion: type_de_transfo tps_d'anim tps_attente_avant_anim fonction-d'animation
+Keyframe:  @keyframes slideDown {
+	from{
+	}
+	to{
+	}
+OU
+	0%{}
+	50%{}
+	100%{}
+	Puis animation: appelé dans la description du type
+forwards: pour appliquer les valeurs en fin d'animation

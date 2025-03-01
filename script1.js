@@ -1,28 +1,58 @@
-// Sélectionner les éléments nécessaires
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const slides = document.querySelectorAll('.slide');
-const slider = document.querySelector('.slide-container ');
+const slider = document.querySelector(".slider");
+const art = slider.querySelectorAll(".article");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+const nb_art = art.length;
+var id_central = Math.round(nb_art/2)-1;
+let translateX = 0;
+let scale = 1;
+const step_trans = 230; // Distance de déplacement
+const step = 2 / nb_art;
 
-let currentIndex = 0; // L'indice du slide actuellement affiché
-
-// Fonction pour afficher le slide suivant
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length; // Passage au slide suivant (inclus la boucle)
-    updateSliderPosition();
+//Initialisation des articles
+for (var i = 0; i < nb_art; i++) {
+    if (i <= id_central) {
+        art[i].style.scale = 1 - (id_central-i)*step;
+        art[i].style.opacity = 1 - (id_central-i)*step;
+    }
+    else {
+        art[i].style.scale = 1 - (i-id_central)*step;
+        art[i].style.opacity = 1 - (i-id_central)*step;
+    }
 }
 
-// Fonction pour afficher le slide précédent
-function showPrevSlide() {
-    currentIndex = (currentIndex - 1) % slides.length; // Passage au slide précédent (inclus la boucle)
-    updateSliderPosition();
-}
+nextBtn.addEventListener("click", () => {
+    translateX -= step_trans;
+    slider.style.transform = `translateX(${translateX}px)`;
 
-// Fonction pour mettre à jour la position du slider
-function updateSliderPosition() {
-    slider.style.transform = `translateX(${currentIndex * 300}px)`; // 300px = largeur de chaque slide
-}
+    for (var i = 0; i < nb_art; i++) {
+        if (i <= id_central) {
+            art[i].style.scale = art[i].style.scale * 1 - step;
+            art[i].style.opacity = art[i].style.opacity * 1 - step;
+        }
+        else {
+            art[i].style.scale = art[i].style.scale * 1 + step;
+            art[i].style.opacity = art[i].style.opacity * 1 + step;
+        }
+    }
+    id_central++;
+});
 
-// Ajouter des événements sur les boutons
-nextButton.addEventListener('click', showNextSlide);
-prevButton.addEventListener('click', showPrevSlide);
+prevBtn.addEventListener("click", () => {
+    translateX += step_trans;
+    slider.style.transform = `translateX(${translateX}px)`;
+
+    for (var i = 0; i < nb_art; i++) {
+        if (i < id_central) {
+            art[i].style.scale = art[i].style.scale * 1 + step;
+            art[i].style.opacity = art[i].style.opacity * 1 + step;
+        }
+        else {
+            art[i].style.scale = art[i].style.scale * 1 - step;
+            art[i].style.opacity = art[i].style.opacity * 1 - step;
+        }
+    }
+    id_central--;
+});
+
+//Moyen de mettre un easter-egg: le glissement des articles n'est pas restreint, on pourrait alors atteindre un certain niveau pour afficher qq ?
