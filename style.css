@@ -3,6 +3,7 @@
 	padding: 0;
 }
 
+
 body {
 	font-family: Arial, sans-serif;
 	background-color: black;
@@ -10,13 +11,20 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 90vh;
+}
+
+titre {
+	text-align: center;
+	color: white;
+	font-size: 100px;
+	
 }
 
 p {
 	color: red
 }
 
+/*-----------ARCHIVE--------------*/
 .card{
 	background: red;
 	height: 400px;
@@ -50,13 +58,6 @@ p {
 	inset: 125px;
 }
 
-/*hover effect*/
-.Box:hover {
-	transform: rotate(360deg);
-	transition: 5s;
-	background-color: red;
-}
-
 .card:hover{
 	transform: rotate3d(1,1,0,60deg);
 }
@@ -80,31 +81,32 @@ p {
 .circle:nth-child(5) {
 	transform: translate3d(0,0,150px);
 }
-
+/*------------------------------------*/
 
 
 /* Conteneur principal du slider */
 .slider-container {
-	width: 2000px;
-	height: 300px;
-	display: flex;
+
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	margin: auto;
+	left: 50%;
 }
 
-/* Le slider contenant tous les articles */
+/* Le slider contenant tous les articles qui glissent*/
 .slider {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 	transition: transform 1s ease;
 }
 
 /* Styles des articles */
 /*METTRE des photos pour illustrer les articles*/
 .article {
-	width: 200px;
-	height: 300px;
+	width: 400px;
+	height: 600px;
 	background-color: white;
 	margin: 20px; /*Espacement entre les articles*/
 	display: flex;
