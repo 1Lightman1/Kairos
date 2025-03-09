@@ -6,7 +6,7 @@ const nb_art = art.length;
 var id_central = 0;
 let translateX = 0;
 let scale = 1;
-const step_trans = 230; // Distance de déplacement
+const step_trans = 407; // Distance de déplacement
 const step = 2 / nb_art;
 
 //Initialisation des articles

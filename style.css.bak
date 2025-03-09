@@ -1,0 +1,182 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font-family: Courier New, sans-serif;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+titre {
+	text-align: center;
+	color: white;
+	font-size: 10px;
+	
+}
+
+p {
+	color: red
+}
+
+/*-----------ARCHIVE--------------*/
+.card{
+	background: red;
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+}
+
+.circle {
+	background: blue;
+	border-radius: inherit;
+	position: absolute;
+	transition: all 1s ease-in-out;
+	box-shadow: -5px 5px 10px #64646f33
+}
+
+.circle:nth-child(1){
+	inset: 25px;
+}
+.circle:nth-child(2){
+	inset: 50px;
+}
+.circle:nth-child(3) {
+	inset: 75px;
+}
+.circle:nth-child(4){
+	inset: 100px;
+}
+.circle:nth-child(5){
+	inset: 125px;
+}
+
+.card:hover{
+	transform: rotate3d(1,1,0,60deg);
+}
+
+.circle:nth-child(1) {
+	transform: translate3d(0,0,30px);
+}
+
+.circle:nth-child(2) {
+	transform: translate3d(0,0,60px);
+}
+
+.circle:nth-child(3) {
+	transform: translate3d(0,0,90px);
+}
+
+.circle:nth-child(4) {
+	transform: translate3d(0,0,120px);
+}
+
+.circle:nth-child(5) {
+	transform: translate3d(0,0,150px);
+}
+/*------------------------------------*/
+
+
+/* Conteneur principal du slider */
+.slider-container {
+
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	left: 50vh;
+}
+
+/* Le slider contenant tous les articles qui glissent*/
+.slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 1s ease;
+}
+
+/* Styles des articles */
+/*METTRE des photos pour illustrer les articles*/
+.article {
+	width: 40vh;
+	height: 60vh;
+	border-radius: 10%;
+	background-color: grey;
+	margin: 20px; /*Espacement entre les articles*/
+	position: relative;
+	transition: scale 1s ease ,opacity 1s ease;
+	
+	
+}
+
+.contenu {
+	display: block;
+	position: absolute;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	bottom: 10%;
+}
+
+.syst_eco {
+	background-image: url("Images/anim_eco.gif");
+	background-size: 110%;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.N_corps {
+	background-image: url("Images/simu_grav.gif");
+	background-size: 110%;
+	background-color: rgb(20, 20, 20);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Boutons de navigation */
+.buttons {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	background-color: black;
+	color: white;
+	transition: background-color 0.5s;
+	border: none;
+	padding: 10px 15px;
+
+	cursor: pointer;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: white;
+	color: black;
+}
+
+button:active{
+	background-color: red;
+	color: black;
+	transition: background-color 0.1s;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: white;
+	text-decoration: none;
+}

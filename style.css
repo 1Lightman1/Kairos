@@ -5,12 +5,13 @@
 
 
 body {
-	font-family: Arial, sans-serif;
+	font-family: Courier New, sans-serif;
 	background-color: black;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
 
 titre {
@@ -90,7 +91,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	left: 50%;
+	left: 50vh;
 }
 
 /* Le slider contenant tous les articles qui glissent*/
@@ -98,23 +99,47 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
 	transition: transform 1s ease;
 }
 
 /* Styles des articles */
 /*METTRE des photos pour illustrer les articles*/
 .article {
-	width: 400px;
-	height: 600px;
-	background-color: white;
+	width: 40vh;
+	height: 60vh;
+	border-radius: 10%;
+	background-color: grey;
 	margin: 20px; /*Espacement entre les articles*/
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: bold;
+	position: relative;
 	transition: scale 1s ease ,opacity 1s ease;
 	
+	
+}
+
+.contenu {
+	display: block;
+	position: absolute;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	bottom: 10%;
+}
+
+.syst_eco {
+	background-image: url("Images/anim_eco.gif");
+	background-size: 110%;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.N_corps {
+	background-image: url("Images/simu_grav.gif");
+	background-size: 110%;
+	background-color: rgb(20, 20, 20);
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /* Boutons de navigation */
@@ -144,4 +169,14 @@ button:active{
 	background-color: red;
 	color: black;
 	transition: background-color 0.1s;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:visited {
+	color: white;
+	text-decoration: none;
 }
