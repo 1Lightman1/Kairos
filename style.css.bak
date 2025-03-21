@@ -145,7 +145,6 @@ p {
 	background-image: url("Images/clothoides.png");
 	background-size: 110%;
 	background-color: white;
-	text-color: blue;
 	background-repeat: no-repeat;
 	background-position: center;
 }

@@ -142,7 +142,7 @@ p {
 }
 
 .clothoide {
-	background-image: url("Images/clothoides.png");
+	background-image: url("Images/clothoides.jpg");
 	background-size: 110%;
 	background-color: white;
 	background-repeat: no-repeat;
@@ -150,7 +150,7 @@ p {
 }
 
 .percolation {
-	background-image: url("Images/percolation.png");
+	background-image: url("Images/percolation.jpg");
 	background-size: 110%;
 	background-color: white;
 	background-repeat: no-repeat;
